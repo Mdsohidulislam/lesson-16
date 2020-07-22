@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegate and purpose of Event bubble</title>
+</head>
+<body>
+    <p>jodi amra kono parent er child er sathe kono eventListener er kaj korte chai tahole amra bbble babohar korbo</p>
+    <h1>Event delegate and purpose of Event bubble</h1>
+     
+ 
+    <div id="container">
+    <h1>My List</h1>
+    <ul id="myList">
+    <li id="first" class="item">Lorem, ipsum dolor.</li>
+    <li class="item">Et, deleniti blanditiis!</li>
+    <li class="item">Ab, cupiditate non?</li>
+    <li class="item">Cupiditate, adipisci odio.</li>
+    <li class="item">Non, illo ea?</li>
+    </ul>
+    <button id="addNew">Add new item</button>
+    </div>
+   <script>
+    /*this*/
+    //    var items=document.getElementsByClassName("item");
+    //    for (let i = 0; i < items.length; i++) {
+    //        var item = items[i];
+    //     item.addEventListener("click",function(event){
+    //         //innerText er madhome amra value pabo
+    //         // console.log(/*this,*/event.target.innerText)
+    //         // console.log(event.target.parentNode)//check for parent
+    //         event.target.parentNode.removeChild(event.target)
+
+    //     })
+    //    }
+
+        document.querySelector("#myList").addEventListener("click",function (event){
+        // console.log(this,event.target);
+        event.target.parentNode.removeChild(event.target);
+
+        })
+       
+    document.querySelector("#addNew").addEventListener("click", function (event){
+        var parentItem=document.querySelector("#myList");
+        var newItem=document.createElement("li");
+        newItem.innerText= "Hello how are you new item is added";
+        parentItem.appendChild(newItem);
+    })
+    //    document.getElementById("addNew").addEventListener("click", function(event){
+    //        var itemParent=document.getElementById("myList");
+    //        var newItem=document.createElement("li");
+    //        newItem.innerText= "Brand new Item";
+    //        itemParent.appendChild(newItem);
+    //    })
+    //    document.querySelector("#first").addEventListener("click",function (event){
+    //        console.log("hello how are you list item has clicked!")
+           
+    //    })
+
+    //    document.querySelector("#container").addEventListener("click",function (event){
+    //     console.log("hello how are you container has clicked!")
+           
+    //    })
+
+    //    document.querySelector("#myList").addEventListener("click",function (event){
+    //        console.log("hello how are you my list has clicked!")
+           
+    //    })
+   </script>
+</body>
+</html>

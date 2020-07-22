@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to organize code inside a function</title>
+</head>
+<body>
+    <!-- <homework>documentation</homework> -->
+    <script>
+        // kono akta variable ke use korar age take declare korte hobe
+        function addNumber(num1,num2){
+            var sum=0;
+            // document.write('double =',double)
+            for (let i = 0; i < arguments.length; i++) {
+                const num = arguments[i];
+                sum=sum+num;
+            }
+            function logInfo(message){
+                document.write(message);
+            }
+            logInfo("Hey,what's up <br>");
+            // return sum;
+            var double=sum*2;
+            return double;
+            
+        }
+        var result=addNumber(11,22,33,44,55,66,77,8,88);
+        document.write(result)
+        // var resultt=double();
+        // document.write(resultt);
+        //  document.write('double =',double)
+    </script>
+</body>
+</html>

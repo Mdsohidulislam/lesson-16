@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop propagating event bubble</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li id="first" class="item">Lorem, ipsum dolor.</li>
+            <li class="item">Et, deleniti blanditiis!</li>
+            <li class="item">Ab, cupiditate non?</li>
+            <li class="item">Cupiditate, adipisci odio.</li>
+            <li class="item">Non, illo ea?</li>
+        </ul>
+    </div>
+    <script>
+        document.querySelector("#container").addEventListener("click",function(event){
+        // console.log("You have clicked on container");
+        // event.stopImmediatePropagation();
+        })
+
+        // alert("hello ")
+        document.querySelector("#first").addEventListener("click",function(event){
+            console.log("You have clicked on list item 1");
+            // event.stopPropagation();
+        })
+
+        document.querySelector("#myList").addEventListener("click",function(event){
+            console.log("You have clicked on ul ");
+            event.stopPropagation();
+            //stopPropagation bouble up bondho korbe 
+            // event.stopImmediatePropagation();
+            //stopImmediatePropagation jodi amra babohar kori tahole tar ase pache othoba div err vitore joto click event handelar ache tao theme jabe"eti tar porer golu to bhondo korbe tar tar elements er vitore ja click event handler ache tao bondho korbe"
+
+        })
+
+
+    </script>
+</body>
+</html>

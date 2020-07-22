@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function and pass different function</title>
+</head>
+<body>
+    <script>
+         function explain_callback(name,age,task){
+            document.write("hello your name :"+name+"<br>");
+            document.write("hello your age :"+age+"<br>");
+            task();
+            // document.write("hello your task : "+task+"<br>");
+            // document.write(task)
+            // washHand();
+            // takeShower();
+         }
+
+         function washHand(){
+             document.write("Wash hand with soap "+"<br>"+"<br>"+"<br>");
+         }
+
+         function takeShower(){
+             document.write("Take shower"+"<br>"+"<br>"+"<br>")
+         }
+
+         function scroll_Facebook(){
+             document.write("scroll facebook but don't like any post"+"<br>"+"<br>"+"<br>")
+         }
+        //  washHand()
+
+         explain_callback("MD SOHIDUL ISLAM",22,washHand)
+         explain_callback("MD MAHIDUL ISLAM",24,takeShower);
+         explain_callback("ABDUL AHAD",23,scroll_Facebook)
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubble with example</title>
+</head>
+<style>
+    {
+        cursor: pointer;
+    }
+</style>
+<body>
+    <a target="_black" href="https://www.google.com/search?q=js+event+double+capture&rlz=1C1CHBD_enBD899BD899&sxsrf=ALeKk02SV8w1Z9EE55wEbTtM0ACwSk08Qg:1595396804523&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjtsbyelODqAhXZTX0KHevEDtUQ_AUoAnoECA0QBA&biw=1280&bih=610"><h1> hey md sohidul islam your homework chapter Event double</h1></a>
+   <div id="container">
+       <h1>My List</h1>
+       <ul id="myList">
+           <li id="first" class="item">Lorem, ipsum dolor.</li>
+           <li class="item">Et, deleniti blanditiis!</li>
+           <li class="item">Ab, cupiditate non?</li>
+           <li class="item">Cupiditate, adipisci odio.</li>
+           <li class="item">Non, illo ea?</li>
+       </ul>
+   </div>
+   <script>
+       document.querySelector("#first").addEventListener("click",function (event){
+           console.log("hello how are you list item has clicked!")
+           
+       })
+
+       document.querySelector("#container").addEventListener("click",function (event){
+        console.log("hello how are you container has clicked!")
+           
+       })
+
+       document.querySelector("#myList").addEventListener("click",function (event){
+           console.log("hello how are you my list has clicked!")
+           
+       })
+   </script>
+</body>
+</html>

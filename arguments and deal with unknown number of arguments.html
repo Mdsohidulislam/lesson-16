@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments and deal with unknown number of arguments</title>
+</head>
+<body>
+    
+    <script>
+        // //  arguments "arguments ekti object kintu array er moto object  abong take function er vitore rit korte parbo baire rit kora jabe na"
+        // function addNumber(num1,num2){
+        //     // document.write(arguments[3]+"<br>")
+        //     // document.write(arguments)
+        //     var sum=0;
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         const num = arguments[i];
+        //         // document.write(num+" ");
+        //         var sum=sum+num;
+        //         // document.write(sum+"<br>")
+        //     }
+        //     // return num1 + num2;
+        //     return sum;
+        // }
+
+        // var result=addNumber(3,6,9,8,33,12,13,44);
+        // document.write(result);
+        // // document.write(arguments);
+
+        //SAME COODE
+        function addNumber(num1,num2){
+            var sum=0;
+            for (let i = 0; i < arguments.length; i++) {
+            const num = arguments[i];
+            var sum=sum+num;
+            }
+            return sum;
+            }
+
+            var result=addNumber(3,6,9,8,33,12,13,44);
+            document.write(result);
+    </script>
+</body>
+</html>
